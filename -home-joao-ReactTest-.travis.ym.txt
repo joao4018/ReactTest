@@ -1,0 +1,2 @@
+/home/joao/ReactTest/.travis.yml
+/home/joao/ReactTest/deploy.sh
