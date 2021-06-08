@@ -3,9 +3,8 @@
 set -e # termina o script com um código diferente de 0 se alguma coisa falhar
 
 # roda o script de build da nossa aplicação
-yarn install
-gulp
-npm build
+yarn run build
+
 
 
 
@@ -21,6 +20,8 @@ fi
 
 # entre na pasta onde está o build do seu projeto e inicie um novo repositório git
 cd build
+yarn install
+gulp
 git init
 
 # inside this git repo we'll pretend to be a new user
