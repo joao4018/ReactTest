@@ -11,15 +11,10 @@ yarn run build
 # pull requests e commits para outras branches diferentes da master 
 # não devem fazer o deploy, isso é opcional caso queira deletar as próximas 6 linhas
 # fique a vontade
-SOURCE_BRANCH="master"
-
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    echo "Skipping deploy."
-    exit 0
-fi
 
 # entre na pasta onde está o build do seu projeto e inicie um novo repositório git
-cd build
+yarn install
+gulp
 git init
 
 # inside this git repo we'll pretend to be a new user
@@ -36,4 +31,4 @@ git commit -m "Deploy to GitHub Pages"
 # gh-pages será perdido, pois vamos substituí-lo.)  Redirecionamos qualquer saída para
 # /dev/null para ocultar quaisquer dados de credenciais sensíveis que de outra forma possam ser expostos.
 # tokens GH_TOKEN e GH_REF serão fornecidos como variáveis de ambiente Travis CI
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+git push --force --quiet "https://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@github.com/joao4018/ReactTest" master:gh-pages > /dev/null 2>&1
