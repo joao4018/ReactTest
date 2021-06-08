@@ -20,8 +20,6 @@ fi
 
 # entre na pasta onde está o build do seu projeto e inicie um novo repositório git
 cd build
-yarn install
-gulp
 git init
 
 # inside this git repo we'll pretend to be a new user
