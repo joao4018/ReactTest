@@ -5,6 +5,8 @@ set -e # termina o script com um código diferente de 0 se alguma coisa falhar
 # roda o script de build da nossa aplicação
 yarn install
 gulp
+npm build
+
 
 
 # pull requests e commits para outras branches diferentes da master 
