@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - '8.9.4'
+  - '10.6.0'
 
 cache:
   yarn: true
@@ -9,5 +9,5 @@ cache:
     - node_modules
 
 script:
-  - yarn test #caso você tenha algum teste para ser rodado
+  - yarn test #caso você tenha algum teste para ser rodado.
   - bash ./deploy.sh
